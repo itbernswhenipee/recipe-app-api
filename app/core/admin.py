@@ -30,7 +30,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': {
+            'fields': (
                 'email',
                 'password1',
                 'password2',
@@ -38,8 +38,9 @@ class UserAdmin(BaseUserAdmin):
                 'is_active',
                 'is_staff',
                 'is_superuser',
-            }
+        )
         }),
     )
+
 
 admin.site.register(models.User, UserAdmin)
